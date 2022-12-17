@@ -1,0 +1,45 @@
+/* Suas estilizações */
+
+.content-wrap {
+  width: 640px;
+  margin: auto;
+}
+
+.content-wrap h1 {
+  text-align: center;
+  color: #5c4b9e;
+  font-weight: bold;
+}
+
+.page-header{
+  width: 100%;
+  background-color: blue;
+}
+.page-header h4{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  padding-top: 16px;
+}
+.page-header h2{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: -4px;
+}
+
+
+.form div{
+  margin-top: 36px;
+}
+
+.form label{
+  display: inline-block;
+  text-align: right;
+  width: 40px;
+  margin-left: 50px;
+}
+.form input{
+  margin-right: 50px;
+}
