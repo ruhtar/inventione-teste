@@ -14,6 +14,7 @@
 .page-header{
   width: 100%;
   background-color: blue;
+  margin-bottom: 50px;
 }
 .page-header h4{
   text-align: center;
@@ -30,7 +31,7 @@
 }
 
 
-.form div{
+.input-container{
   margin-top: 36px;
 }
 
@@ -42,4 +43,22 @@
 }
 .form input{
   margin-right: 50px;
+}
+
+
+.sex-container{
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 0px;
+  width: 160px;
+  margin-left: 50px;
+}
+
+.sex-container div label{
+  margin: 0px;
+}
+
+.sex-container div input{
+  margin: 0px;
+  margin-left: 16px;
 }
