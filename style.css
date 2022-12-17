@@ -30,18 +30,13 @@
   margin-bottom: -4px;
 }
 
-
 .input-container{
   margin-top: 36px;
 }
-
-.form label{
-  display: inline-block;
-  text-align: right;
-  width: 40px;
+.main label{
   margin-left: 50px;
 }
-.form input{
+.main input{
   margin-right: 50px;
 }
 
@@ -65,4 +60,31 @@
 .radio-container div input{
   margin: 0px;
   margin-left: 16px;
+}
+
+.checkbox-container input{
+  margin: 0px;
+}
+.checkbox-container label{
+  margin: 0px;
+}
+.checkbox-container{
+  margin-top: 40px;
+  margin-left: 90px;
+}
+
+#text{
+  width: 100%;
+}
+
+#hideable-container{
+  margin-top: 20px;
+  text-align: right;
+  display: none;
+}
+
+
+
+.button{
+  margin-top: 20px;
 }

@@ -1,6 +1,6 @@
 // Seus scripts aqui
 
-function datetime() {
+/* function datetime() {
   var title = document.getElementById('title');
   var now = new Date();
   
@@ -8,4 +8,13 @@ function datetime() {
 }
 
 
-datetime();
+datetime(); */
+
+const hideElements = () => {
+  if(document.getElementById("checkbox").checked){
+    document.getElementById("hideable-container").style.display = "block"
+  }
+  else{ 
+    document.getElementById("hideable-container").style.display = "none"
+  }
+}

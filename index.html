@@ -16,16 +16,16 @@
         <h4>Teste Inventione</h4>
         <h2>Arthur Amorim</h2>
       </header>
-      <form class="form">
+      <form class="main">
         <div class="input-container">
-          <label>Nome</label>
-          <input type="text" placeholder="Digite seu nome...">
-          <label>Data</label>
-          <input type="date" >
+          <label for="name">Nome</label>
+          <input type="text" placeholder="Digite seu nome..." id="name">
+          <label for="date">Data</label>
+          <input type="date" id="date">
         </div>
         <div class="input-container">
-          <label>Idade</label>
-          <input type="number" placeholder="Digite sua idade...">
+          <label for="age">Idade</label>
+          <input type="number" placeholder="Digite sua idade..." id="age">
         </div>
         <div class="sex-container">
           <label>Sexo</label>
@@ -40,7 +40,19 @@
             </div>
           </div>
         </div>
+        <div class="checkbox-container">
+          <input type="checkbox" name="checkbox" id="checkbox" onclick=hideElements() >
+          <label>Habilitar Segundo Painel</label>
+        </div>
+        <div id="hideable-container">
+          <textarea name="text" id="text" rows="5" maxlength="10000" placeholder="Insira um texto aqui." ></textarea>
+          <button class="button">
+            Apresentar
+          </button>
+        </div>
       </form>
+
+    
     </div>
     
     <script src="script.js"></script>
