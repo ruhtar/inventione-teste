@@ -45,20 +45,24 @@
   margin-right: 50px;
 }
 
-
 .sex-container{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.radio-container{
   border: 1px solid;
   border-radius: 10px;
   margin: 0px;
-  width: 160px;
-  margin-left: 50px;
+  width: 180px;
+  margin-left:55px;
 }
 
-.sex-container div label{
+.radio-container div label{
   margin: 0px;
 }
 
-.sex-container div input{
+.radio-container div input{
   margin: 0px;
   margin-left: 16px;
 }
