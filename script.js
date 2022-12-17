@@ -19,25 +19,31 @@ const hideElements = () => {
   }
 }
 
-const createTextArea = (event) => {
+const createAndUpdateTextArea = (event) => {
   event.preventDefault();
   if(document.getElementById("readonly-textarea")){
     document.getElementById("readonly-textarea").textContent = "Já existe";
-    showInfos();
   }
   else{
-    const readonlyTextArea = document.createElement("textarea")
-    readonlyTextArea.setAttribute("id", "readonly-textarea")
-    readonlyTextArea.setAttribute("readonly", "true")
-    showInfos();
-    document.getElementById("infos").appendChild(readonlyTextArea)
+    const readOnlyTextArea = document.createElement("textarea")
+    readOnlyTextArea.setAttribute("id", "readonly-textarea")
+    readOnlyTextArea.setAttribute("readonly", "true")
+    const name = document.getElementById('name').value
+    const age = document.getElementById('age').value
+    const date = document.getElementById('date').value
+    const sex = document.querySelector('input[name="sexAnswer"]:checked').value
+    const textContent = document.getElementById('text-content').value
+    const number = getWordNumber(textContent)
+    readOnlyTextArea.value = 
+`Nome:${name} 
+Idade:${age}  
+Sexo:${sex}
+Data:${date}
+Número de palavras contadas: ${number}`
+    document.getElementById("infos").appendChild(readOnlyTextArea)
   }
 }
 
-const showInfos = () => {
-  const name = document.getElementById('name').value
-  const age = document.getElementById('age').value
-  const date = document.getElementById('date').value
-  const sex =  document.getElementById('date').value
-
+function getWordNumber(text) {
+  return text.split(' ').filter((n) =>  n != '' ).length;
 }

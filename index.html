@@ -17,26 +17,26 @@
         <h4>Teste Inventione</h4>
         <h2>Arthur Amorim</h2>
       </header>
-      <form class="main" onsubmit=createTextArea(event)>
+      <form class="main" onsubmit=createAndUpdateTextArea(event)>
         <div class="input-container">
           <label for="name">Nome</label>
-          <input type="text" placeholder="Digite seu nome..." id="name">
+          <input type="text" placeholder="Digite seu nome..." id="name" required>
           <label for="date">Data</label>
-          <input type="date" id="date">
+          <input type="date" id="date" required>
         </div>
         <div class="input-container">
           <label for="age">Idade</label>
-          <input type="number" placeholder="Digite sua idade..." id="age">
+          <input type="number" placeholder="Digite sua idade..." id="age" required>
         </div>
         <div class="sex-container">
           <label>Sexo</label>
           <div class="radio-container">
             <div>
-              <input type="radio" name="sexAnswer" id="Masculino">
+              <input type="radio" name="sexAnswer" id="Masculino"  value="Masculino" required>
               <label for="Masculino">Masculino</label>
             </div>
             <div>
-              <input type="radio" name="sexAnswer" id="Feminino">
+              <input type="radio" name="sexAnswer" id="Feminino" value="Feminino" required>
               <label for="Feminino">Feminino</label>
             </div>
           </div>
@@ -46,7 +46,7 @@
           <label for="checkbox">Habilitar Segundo Painel</label>
         </div>
         <div id="hideable-container">
-          <textarea name="text" class="text" maxlength="10000" placeholder="Insira um texto aqui." ></textarea>
+          <textarea name="text" class="text" maxlength="10000" placeholder="Insira um texto aqui." id="text-content"></textarea>
           <button class="button">
             Apresentar
           </button>
