@@ -21,29 +21,29 @@ const hideElements = () => {
 
 const createAndUpdateTextArea = (event) => {
   event.preventDefault();
-  if(document.getElementById("readonly-textarea")){
+/*   if(document.getElementById("readonly-textarea")){
     document.getElementById("readonly-textarea").textContent = "Já existe";
-  }
-  else{
+  } */
     const readOnlyTextArea = document.createElement("textarea")
-    readOnlyTextArea.setAttribute("id", "readonly-textarea")
+    readOnlyTextArea.setAttribute("class", "readonly-textarea")
     readOnlyTextArea.setAttribute("readonly", "true")
     const name = document.getElementById('name').value
     const age = document.getElementById('age').value
     const date = document.getElementById('date').value
+    console.log(date);
     const sex = document.querySelector('input[name="sexAnswer"]:checked').value
     const textContent = document.getElementById('text-content').value
     const number = getWordNumber(textContent)
+    const formattedDate = date.split("-").reverse().join("-");
     readOnlyTextArea.value = 
-`Nome:${name} 
-Idade:${age}  
-Sexo:${sex}
-Data:${date}
+`Nome: ${name}
+Idade: ${age}
+Sexo: ${sex}
+Data: ${formattedDate}
 Número de palavras contadas: ${number}`
     document.getElementById("infos").appendChild(readOnlyTextArea)
-  }
 }
-
-function getWordNumber(text) {
-  return text.split(' ').filter((n) =>  n != '' ).length;
+ 
+const getWordNumber = (text) => {
+  return text.split(' ').filter((element) =>  element !== '' ).length;
 }
