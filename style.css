@@ -1,20 +1,8 @@
-/* Suas estilizações */
-
-.content-wrap {
-  width: 640px;
-  margin: auto;
-}
-
-.content-wrap h1 {
-  text-align: center;
-  color: #5c4b9e;
-  font-weight: bold;
-}
 
 .page-header{
+  margin-top: -10px;
   width: 100%;
   background-color: blue;
-  margin-bottom: 50px;
 }
 .page-header h4{
   text-align: center;
@@ -32,6 +20,10 @@
 
 .input-container{
   margin-top: 36px;
+}
+.main{
+  margin: auto;
+  width: 640px;
 }
 .main label{
   margin-left: 50px;
