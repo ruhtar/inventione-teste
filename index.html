@@ -7,25 +7,27 @@
     <script data-require="jquery@*" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script data-require="bootstrap@3.3.7" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script data-require="angular.js@1.6.2" data-semver="1.6.2" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+    <!-- Fonte usada: Heebo -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
   </head>
 
   <body>
-  <header class="page-header">
+  <header id="page-header">
     <h4>Teste Inventione</h4>
-    <h2>Arthur Amorim</h2>
+    <h2>Arthur Amorim Barroso Silva</h2>
   </header>
   <form class="main" onsubmit=createAndUpdateTextArea(event)>
     <div class="input-container">
-      <label for="name">Nome</label>
-      <input type="text" placeholder="Digite seu nome..." id="name" required>
-      <label for="date">Data</label>
-      <input type="date" id="date" required>
+      <label for="name">Nome:</label>
+      <input type="text" placeholder="Digite seu nome" id="name" required>
+      <label for="date">Data:</label>
+      <input type="date" id="date" required min="0000-01-01" max="9999-12-31">
     </div>
     <div class="input-container">
-      <label for="age">Idade</label>
-      <input type="number" placeholder="Digite sua idade..." id="age" required>
+      <label for="age">Idade:</label>
+      <input type="number" placeholder="Digite sua idade" id="age" required>
     </div>
     <div class="sex-container">
       <label>Sexo</label>
@@ -41,11 +43,12 @@
       </div>
     </div>
     <div class="checkbox-container">
-      <input type="checkbox" name="checkbox" id="checkbox" onclick=hideElements() >
+      <input type="checkbox" name="checkbox" id="checkbox" onclick=hideElements() autocomplete="off" >
       <label for="checkbox">Habilitar Segundo Painel</label>
     </div>
     <div id="hideable-container">
-      <textarea name="text" class="text" maxlength="10000" placeholder="Insira um texto aqui. (Máx: 10000 caracteres.)" id="text-content"></textarea>
+      <textarea name="text" class="text" maxlength="10000" 
+      placeholder="Insira um texto aqui. (Máx: 10000 caracteres)" id="text-content"></textarea>
       <button class="button">
         Apresentar
       </button>
