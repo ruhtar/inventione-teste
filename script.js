@@ -8,10 +8,10 @@ const hideElements = () => {
 }
 
 const getInfos = () => {
-  const name = document.getElementById('name').value;
-  const age = document.getElementById('age').value;
+  const name = document.getElementById("name").value;
+  const age = document.getElementById("age").value;
   const sex = document.querySelector('input[name="sexAnswer"]:checked').value;
-  const date = document.getElementById('date').value; //YYYY-MM-DD
+  const date = document.getElementById("date").value; //YYYY-MM-DD
   const formattedDate = date.split("-").reverse().join("-"); //DD-MM-YYYY
   const numberOfWords = getWordNumber();
   return (
@@ -34,15 +34,25 @@ const createAndUpdateTextArea = (event) => {
 }
 
 const getWordNumber = () => {
-  const textContent = document.getElementById("text-content").value;
-  return textContent.split(' ').filter((element) =>  element !== '' ).length;
+  let textContent = document.getElementById("text-content").value
+  const specialCharPattern = /^[^a-zA-Z0-9 \n]+$/;
+  const numberPattern = /^\d+$/;  
+  const consonantsPattern = /^[^aeiou]+$/;
+  let validText = [];
+  textContent.toLowerCase().split(" ").map((item)=>{
+    if (!specialCharPattern.test(item) && !numberPattern.test(item) && !consonantsPattern.test(item)){
+      validText.push(item);
+    }
+  })
+  console.log(validText);
+  return validText.filter((element) =>  element !== "" ).length;
 }
 
 const clearInputs = () => {
-  document.getElementById('name').value = '';
-  document.getElementById('age').value = '';
-  document.getElementById('date').value = '';
-  document.getElementById('Feminino').checked = false;
-  document.getElementById('Masculino').checked = false;
-  document.getElementById("text-content").value = '';
+  document.getElementById("name").value = "";
+  document.getElementById("age").value = "";
+  document.getElementById("date").value = "";
+  document.getElementById("Feminino").checked = false;
+  document.getElementById("Masculino").checked = false;
+  document.getElementById("text-content").value = "";
 }
